@@ -1,0 +1,15 @@
+{
+  "name": "lat-web-notes-full",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "test:02": "node tests/lesson-02.js",
+    "test:03": "node tests/lesson-03.js",
+    "test:04": "node tests/lesson-04.js",
+    "test:05": "node tests/lesson-05.js"
+  }
+}

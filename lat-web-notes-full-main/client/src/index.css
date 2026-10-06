@@ -1,0 +1,163 @@
+/* Reinicio global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #86868b;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f5f7;
+  --color-border: rgb(0 0 0 / 0.1);
+  --color-accent: #f5b800;
+  --color-accent-hover: #e0a800;
+  --color-link: #9a7100;
+  --color-danger: #c0392b;
+  --shadow: 0 0 0.5px 0 rgb(0 0 0 / 0.2), 0 1px 2px 0 rgb(0 0 0 / 0.08);
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-secondary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Estilos de NotesPage */
+
+.notes__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+
+.notes__message {
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.notes__message_error {
+  color: var(--color-danger);
+}
+
+/* Estilos de los formularios de autenticación */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.form__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.form__input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.form__input:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -1px;
+}
+
+.form__submit-btn {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 8px;
+}
+
+.form__submit-btn:not(:disabled):hover {
+  background-color: var(--color-accent-hover);
+}
+
+.form__error {
+  font-size: 0.85rem;
+  color: var(--color-danger);
+}
+
+.form__text {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* Estilos de NotFoundPage */
+
+.not-found {
+  text-align: center;
+}
+
+.not-found__title {
+  font-size: 3rem;
+}
+
+.not-found__text {
+  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+}
