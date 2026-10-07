@@ -76,17 +76,20 @@ tests/     pruebas de verificación de cada lección
 
 ## API
 
-| Método | Ruta | Requiere token | Descripción |
-|--------|------|----------------|-------------|
-| `POST` | `/auth/register` | No | Crea una cuenta |
-| `POST` | `/auth/login` | No | Inicia sesión y devuelve un token |
-| `GET` | `/auth/me` | Sí | Devuelve los datos de la cuenta actual |
-| `GET` | `/notes` | Sí | Lista tus notas, de la más reciente a la más antigua |
-| `POST` | `/notes` | Sí | Crea una nota a tu nombre |
-| `DELETE` | `/notes/:id` | Sí | Borra una nota tuya; una ajena responde 403 |
+| Método   | Ruta             | Requiere token | Descripción                                          |
+| -------- | ---------------- | -------------- | ---------------------------------------------------- |
+| `POST`   | `/auth/register` | No             | Crea una cuenta                                      |
+| `POST`   | `/auth/login`    | No             | Inicia sesión y devuelve un token                    |
+| `GET`    | `/auth/me`       | Sí             | Devuelve los datos de la cuenta actual               |
+| `GET`    | `/notes`         | Sí             | Lista tus notas, de la más reciente a la más antigua |
+| `POST`   | `/notes`         | Sí             | Crea una nota a tu nombre                            |
+| `DELETE` | `/notes/:id`     | Sí             | Borra una nota tuya; una ajena responde 403          |
 
 Todas las respuestas tienen la misma forma:
 
 ```json
 { "success": true, "data": {}, "error": null }
 ```
+
+Live Demo: https://sprint-16-yzbi.vercel.app
+API: https://sprint-16-teal.vercel.app
